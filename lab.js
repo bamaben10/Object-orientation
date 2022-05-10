@@ -6,7 +6,10 @@
 
 //Code here
 
-
+let me = {
+  name: 'Ben Salmon',
+  age: 25
+};
 
 //////////////////////////// PROBLEM 2 ////////////////////////////
 
@@ -17,6 +20,12 @@
 
 //Code here
 
+let dog = {
+  name: 'Lassie',
+  color: 'Black',
+  age: 8,
+  goodGirl: true
+};
 
 
 //////////////////////////// PROBLEM 3 ////////////////////////////
@@ -24,14 +33,14 @@
 
 //Code here
 
-
+console.log(dog.name)
 
 //////////////////////////// PROBLEM 4 ////////////////////////////
 /* Print out the color of the dog you created in problem 2 using bracket-notation. */
 
 //Code here
 
-
+console.log(dog['color']);
 
 //////////////////////////// PROBLEM 5 ////////////////////////////
 /*
@@ -41,6 +50,14 @@
 
 //Code here
 
+let favoriteThings = {
+  band: 'Imagine Dragons',
+  food: 'steak',
+  person: 'Dad',
+  book: 'Harry Potter',
+  movie: 'The Conjuring',
+  holiday: 'Halloween'
+}
 
 /*
   After you've made your object, use bracket or dot notation to add another key named 'car' with the value being your favorite car and then another key named 'show' with the value being your favorite show.
@@ -48,6 +65,8 @@
 
 //Code here
 
+favoriteThings['car'] = 'Aston Martin'
+favoriteThings.show = 'The Office'
 
 /*
   Now use bracket or dot notation to change the value of the food key in your favoriteThings object to be 'Chicken Nuggets'
@@ -55,6 +74,9 @@
 */
 
 //Code here
+
+favoriteThings['food'] = 'chicken nuggets';
+favoriteThings.book = "Chronicles of Narnia";
 
 
 //////////////////////////// PROBLEM 6 ////////////////////////////
@@ -73,8 +95,11 @@ var carDetails = {
 */
 
 //Code Here
-
-
+let { color, make, model, year } = carDetails;
+console.log(color);
+console.log(make);
+console.log(model);
+console.log(year);
 
 //////////////////////////// PROBLEM 7 ////////////////////////////
 
@@ -86,12 +111,11 @@ var carDetails = {
 
 function greeting( obj ) {
   //Code Here
-  
+  let { firstName, lastName, title } = obj;
   // Do not edit the code below.
   return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
   // Do not edit the code above.
 }
-
 
 
 //////////////////////////// PROBLEM 8 ////////////////////////////
@@ -105,8 +129,17 @@ function greeting( obj ) {
 */
 
 //Code Here
-
-
+function totalPopulation(object) {
+  let { utah, california, texas, arizona } = object;
+  return utah + california + texas + arizona;
+}
+let test = {
+  utah: 10,
+  california: 20,
+  texas: 30,
+  arizona: 60
+};
+console.log(totalPopulation(test))
 
 //////////////////////////// PROBLEM 9 ////////////////////////////
 
