@@ -153,7 +153,20 @@ console.log(totalPopulation(test))
 
 //Code Here
 
+function ingredients(object) {
+  let { carb, fat, protein } = object;
+  let result = [];
+  result.push(carb, fat, protein);
+  return result;
+}
 
+// let test2 = {
+//   carb: "pasta",
+//   fat: "butter",
+//   protein: "beef"
+// }
+
+// console.log(ingredients(test2))
 
 //////////////////////////// PROBLEM 10 ////////////////////////////
 // Do not edit the code below.
@@ -174,7 +187,9 @@ var user = {
 */
 
 //Code Here
-
+user['name'] = 'Bryan G. Smith';
+user.email = 'bryan.smith@devmounta.in'
+console.log(user)
 
 //////////////////////////// PROBLEM 11 ////////////////////////////
 /*
@@ -182,7 +197,8 @@ var user = {
 */
 
 //Code Here
-
+delete user.age; 
+console.log(user)
 
 //////////////////////////// PROBLEM 12 ////////////////////////////
 /*
@@ -193,8 +209,18 @@ var user = {
 
 //Code here
 
+class Cat {
+  constructor(name, age, color) {
+    this.name = name;
+    this.age = age;
+    this.color = color;
+  }
+}
 
+let cat1 = new Cat('Tom', 4, 'black');
+console.log(cat1.name)
 
+//object.key
 //////////////////////////// PROBLEM 13 ////////////////////////////
 /*
   Create a class called 'Wizard'. Make sure to call your constructor, and require these 3 parameters: name, age, favoriteSpell.
@@ -204,6 +230,36 @@ var user = {
 */
 
 //Code here
+
+// class Wizard {
+//   constructor(name, age, favoriteSpell) {
+//     this.name = name;
+//     this.age = age;
+//     this.favoriteSpell = favoriteSpell;
+//   }
+
+//   castSpell() {
+//     console.log(`${this.name} has cast ${this.favoriteSpell}`);
+//   }
+// }
+
+// let wizard1 = new Wizard('Dumbledore', 150, 'forceful');
+// console.log(wizard1.castSpell())
+
+class Wizard {
+  constructor(name, age, favoriteSpell) {
+    this.name = name;
+    this.age = age;
+    this.favoriteSpell = favoriteSpell;
+  }
+
+  castSpell() {
+    console.log(`${this.name} has cast ${this.favoriteSpell}`);
+  }
+}
+
+let wizard1 = new Wizard("Dumbledore", 150, "Forceful");
+wizard1.castSpell()
 
 //////////////////////////// PROBLEM 14 ////////////////////////////
 /*
@@ -229,7 +285,24 @@ var user = {
 */
 
 //Code Here
+class Phone {
+  constructor(brand, model, storage, color, price) {
+    this.brand = brand;
+    this.model = model;
+    this.storage = storage;
+    this.color = color;
+    this.price = price;
+    this.sold = false;
+  } 
 
+  sell() {
+    this.sold = true;
+    console.log(`${this.brand} ${this.model} has been sold.`)
+  }
+  changePrice(newPrice) {
+    this.price = newPrice;
+  }
+}
   
 /*
     Next make three new phone instances using your class.
@@ -242,6 +315,9 @@ var user = {
 */
 
 //Code Here
+let phone1 = new Phone('Apple', 'iPhone', 64, 'gold', 700)
+let phone2 = new Phone('Google', 'Pixel', 128, 'black', 500)
+let phone3 = new Phone('Samsung', 'Galaxy', 256, 'grey', 800)
 
 /* 
   Call the changePrice function on one of your phones, 
@@ -251,7 +327,8 @@ var user = {
 */ 
 
 //Code Here 
-
+phone1.changePrice(600)
+console.log(phone1);
 
 /*
   Now call the sell method on one of your other phone objects
@@ -260,7 +337,8 @@ var user = {
 */
 
 //Code Here 
-
+phone2.sell();
+console.log(phone2.sold)
 
 //////////////////////////// PROBLEM 15 ////////////////////////////
 
@@ -279,7 +357,7 @@ const colors = {
 //do not edit this object
 
 //Code Here 
-
+let colorsCopy = {...colors};
 
 
 /*
@@ -307,8 +385,7 @@ const shippingInfo = {
 //do not edit the objects above
 
 //Code Here
-
-
+let helensInfo = {contact}
 //Print helensInfo to see what it looks like, there should be no repeating properties.
 
 
